@@ -1,5 +1,3 @@
 #!/usr/bin/env node
-
-import playEvenGame from '../src/gameLogic.js';
-
+import { playEvenGame } from '../games/parity-game.js';
 playEvenGame();
