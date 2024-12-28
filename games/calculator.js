@@ -6,8 +6,8 @@ export const playCalcGame = () => {
   const generateQuestionAndAnswer = () => {
     const operations = ['+', '-', '*'];
     const operation = operations[Math.floor(Math.random() * operations.length)];
-    const num1 = Math.floor(Math.random() * 20);
-    const num2 = Math.floor(Math.random() * 20);
+    const num1 = Math.floor(Math.random() * 100);
+    const num2 = Math.floor(Math.random() * 100);
 
     let question;
     let correctAnswer;
@@ -29,10 +29,7 @@ export const playCalcGame = () => {
         break;
     }
 
-    return {
-      question,
-      correctAnswer,
-    };
+    return [question, correctAnswer];
   };
 
   runGame(description, generateQuestionAndAnswer);

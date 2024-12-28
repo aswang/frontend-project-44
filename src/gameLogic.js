@@ -13,7 +13,7 @@ const runGame = (description, generateQuestionAndAnswer) => {
   let correctAnswersCount = 0;
 
   while (correctAnswersCount < 3) {
-    const { question, correctAnswer } = generateQuestionAndAnswer();
+    const [question, correctAnswer] = generateQuestionAndAnswer();
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
 

@@ -6,10 +6,7 @@ export const playEvenGame = () => {
   const generateQuestionAndAnswer = () => {
     const randomNumber = Math.floor(Math.random() * 100);
     const correctAnswer = randomNumber % 2 === 0 ? 'yes' : 'no';
-    return {
-      question: randomNumber,
-      correctAnswer,
-    };
+    return [`${randomNumber}`, correctAnswer];
   };
 
   runGame(description, generateQuestionAndAnswer);
