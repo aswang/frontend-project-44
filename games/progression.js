@@ -20,18 +20,16 @@ export const playProgressionGame = () => {
     const description = 'What number is missing in the progression?';
    
     const generateQuestionAndAnswer = () => {
-        const start = Math.floor(Math.random() * 10);
-        const step = Math.floor(Math.random() * 6);
-
-        let min = 5;
-        let max = 15;
-        const numTerms = randomFromInterval(min, max);
-        
-        const hiddenIndex = randomFromInterval(start, numTerms);
+        const start = randomFromInterval(1, 10);
+        const step = randomFromInterval(1, 6);
+    
+        const numTerms = randomFromInterval(5, 15);
+        const hiddenIndex = randomFromInterval(0, numTerms - 1);
+    
         const progression = generateArithmeticProgression(start, step, numTerms, hiddenIndex);
         const correctAnswer = String(start + hiddenIndex * step);
     
-    return [progression.join(' '), correctAnswer];
+        return [progression.join(' '), correctAnswer];
       };
     
       runGame(description, generateQuestionAndAnswer);
