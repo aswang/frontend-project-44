@@ -10,9 +10,10 @@ const runGame = (description, generateQuestionAndAnswer) => {
   console.log(`Hello, ${name}!`);
   console.log(description);
 
+  let answersCount = 3;
   let correctAnswersCount = 0;
 
-  while (correctAnswersCount < 3) {
+  while (correctAnswersCount < answersCount) {
     const [question, correctAnswer] = generateQuestionAndAnswer();
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
