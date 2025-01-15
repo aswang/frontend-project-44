@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const ANSWER_COUNT = 1;
+const ANSWER_COUNT = 3;
 
 const runGame = (description, generateQuestionAndAnswer) => {
   console.log('Welcome to the Brain Games!');
