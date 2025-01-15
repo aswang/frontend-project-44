@@ -4,7 +4,7 @@ const runGame = (description, generateQuestionAndAnswer) => {
   console.log('Welcome to the Brain Games!');
   let name = readlineSync.question('May I have your name? ');
   if (!name) {
-    name = 'NoName =(';
+    name = 'Stranger';
   }
 
   console.log(`Hello, ${name}!`);
