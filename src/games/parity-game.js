@@ -1,10 +1,11 @@
-import runGame from '../src/gameLogic.js';
+import runGame from '../gameLogic.js';
+import { getRandomNumber } from '../utils/randomNumber.js';
 
 export const playEvenGame = () => {
   const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
   const generateQuestionAndAnswer = () => {
-    const randomNumber = Math.floor(Math.random() * 100);
+    const randomNumber = getRandomNumber();
     const correctAnswer = randomNumber % 2 === 0 ? 'yes' : 'no';
     return [`${randomNumber}`, correctAnswer];
   };
