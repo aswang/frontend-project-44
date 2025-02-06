@@ -1,6 +1,6 @@
 import globals from "globals";
 import js from "@eslint/js";
-import importPlugin from "eslint-plugin-import"; // Добавляем импорт плагина
+import importPlugin from "eslint-plugin-import";
 
 export default [
   {
@@ -11,7 +11,7 @@ export default [
       globals: globals.browser,
     },
     plugins: {
-      import: importPlugin, // Регистрируем плагин "import"
+      import: importPlugin,
     },
     rules: {
       "eol-last": ["error", "always"],
